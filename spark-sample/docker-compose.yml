@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+
+  spark-sample:
+    build: .
+    image: spark-sample
+    environment:
+      - SPARK_MASTER_NAME=spark-master
+
+networks:
+  default:
+    external:
+      name: spark-cluster_spark
+
